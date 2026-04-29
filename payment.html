@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oravixa — Payment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-gem">◈</span>Oravixa
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"    class="nav-link">Home</a></li>
+        <li><a href="checkout.html" class="nav-link">Checkout</a></li>
+        <li><a href="payment.html"  class="nav-link active">Payment</a></li>
+      </ul>
+      <button class="hamburger" id="ham" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-wrap">
+    <div class="page-box--sm">
+
+      <!-- ── Payment panel ── -->
+      <div id="payPanel">
+        <a href="checkout.html" class="back-link">← Back to Checkout</a>
+        <h1 class="page-title">Complete Payment</h1>
+
+        <div class="pay-card">
+
+          <!-- Order summary bar — filled by JS -->
+          <div class="pay-summary" id="paySummary"></div>
+
+          <!-- Crypto section -->
+          <div class="pay-body">
+
+            <div class="badges">
+              <span class="badge badge-purple">USDT TRC20</span>
+              <span class="badge badge-yellow">Tron Network</span>
+            </div>
+
+            <!-- QR Code -->
+            <div class="qr-wrap">
+              <img id="qrImg" class="qr-img" src="" alt="Payment QR Code">
+              <span class="qr-lbl">Scan to pay</span>
+            </div>
+
+            <!-- Wallet address -->
+            <div>
+              <label class="field-lbl">Send to wallet address</label>
+              <div class="addr-box">
+                <span class="addr-txt" id="walletAddr"></span>
+                <button class="copy-btn" id="copyBtn" title="Copy address" aria-label="Copy address">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2"/>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Amount -->
+            <div>
+              <label class="field-lbl">Exact amount to send</label>
+              <div class="amount-box">
+                <span class="amount-val" id="amtVal">0.00</span>
+                <span class="amount-cur">USDT</span>
+              </div>
+            </div>
+
+            <!-- Notice -->
+            <div class="notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+              Send the exact amount in USDT (TRC20) to this address. Do not send any other currency.
+            </div>
+
+            <!-- CTA -->
+            <button class="btn btn-primary btn-full btn-lg" id="paidBtn">
+              <span>✓</span> I have paid
+            </button>
+
+          </div><!-- /pay-body -->
+        </div><!-- /pay-card -->
+      </div><!-- /payPanel -->
+
+      <!-- ── Success panel ── -->
+      <div id="successPanel" style="display:none" class="success-wrap">
+        <svg class="success-ring" viewBox="0 0 52 52">
+          <circle class="ring-bg" cx="26" cy="26" r="25" fill="none"/>
+          <path class="check-path" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+
+        <h2 class="success-title">Payment Received!</h2>
+        <p class="success-msg">
+          Payment received. Your gift card will be sent to your email.
+        </p>
+
+        <div class="success-details" id="successDetails"></div>
+
+        <a href="index.html" class="btn btn-primary">Back to Store</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-gem">◈</span>Oravixa
+        </a>
+        <p>Premium gift cards with instant crypto payments.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="payment.html">Payment</a>
+      </div>
+      <p class="footer-note">Demo site — no real transactions processed</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
