@@ -8,41 +8,41 @@
 </head>
 <body>
 
-  <!-- ── Navbar ── -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <span class="logo-gem">◈</span>Oravixa
+  <!-- Navbar -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__gem">◈</span>Oravixa
       </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html"    class="nav-link">Home</a></li>
-        <li><a href="checkout.html" class="nav-link active">Checkout</a></li>
-        <li><a href="payment.html"  class="nav-link">Payment</a></li>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html"    class="nav__link">Home</a></li>
+        <li><a href="checkout.html" class="nav__link active">Checkout</a></li>
+        <li><a href="payment.html"  class="nav__link">Payment</a></li>
       </ul>
-      <button class="hamburger" id="ham" aria-label="Toggle menu">
+      <button class="nav__ham" id="ham" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <main class="page-wrap">
-    <div class="page-box">
+  <main class="page">
+    <div class="page__box">
 
-      <a href="index.html" class="back-link">← Back to Store</a>
-      <h1 class="page-title">Checkout</h1>
-      <p class="page-sub">Review your selection and enter your email address</p>
+      <a href="index.html" class="back">← Back to store</a>
+      <h1 class="page__title">Checkout</h1>
+      <p class="page__sub">Review your order and enter your email</p>
 
-      <!-- Checkout grid (shown when product selected) -->
-      <div class="co-grid" id="coGrid">
+      <!-- Two-column layout — hidden if no product -->
+      <div class="co__grid" id="coGrid">
 
-        <!-- Order summary — filled by JS -->
-        <div class="panel" id="orderSummary"></div>
+        <!-- Order summary (populated by JS) -->
+        <div class="panel" id="summary"></div>
 
         <!-- Form -->
         <div class="panel">
-          <h3>Your Details</h3>
-          <form id="coForm" novalidate>
-            <div class="fgroup">
+          <p class="panel__h">Your Details</p>
+          <form id="form" novalidate>
+            <div class="fg">
               <label for="email">Email Address</label>
               <input
                 type="email" id="email" name="email"
@@ -51,41 +51,41 @@
               >
               <span class="ferr" id="emailErr"></span>
             </div>
-            <button type="submit" class="btn btn-primary btn-full btn-lg">
-              Proceed to Payment <span class="btn-arrow">→</span>
+            <button type="submit" class="btn btn--primary btn--full btn--lg">
+              Proceed to Payment <span class="arr">→</span>
             </button>
           </form>
-          <p class="fnote">Your gift card code will be sent to this email</p>
+          <p class="fnote">Your gift card code will be sent to this address</p>
         </div>
 
       </div>
 
-      <!-- Empty state (shown when no product selected) -->
-      <div class="empty" id="emptyState" style="display:none">
-        <div class="empty-icon">🎁</div>
-        <h3>No item selected</h3>
-        <p>Browse our gift cards and click Buy Now to continue</p>
-        <a href="index.html" class="btn btn-primary">Browse Gift Cards</a>
+      <!-- Empty state -->
+      <div class="empty" id="empty" style="display:none">
+        <div class="empty__ico">🎁</div>
+        <h3>Nothing selected yet</h3>
+        <p>Head back to the store and pick a gift card</p>
+        <a href="index.html" class="btn btn--primary">Browse Gift Cards</a>
       </div>
 
     </div>
   </main>
 
-  <!-- ── Footer ── -->
+  <!-- Footer -->
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo">
-          <span class="logo-gem">◈</span>Oravixa
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo">
+          <span class="nav__gem">◈</span>Oravixa
         </a>
-        <p>Premium gift cards with instant crypto payments.</p>
+        <p>Premium gift cards · Instant crypto payments</p>
       </div>
-      <div class="footer-links">
+      <div class="footer__links">
         <a href="index.html">Home</a>
         <a href="checkout.html">Checkout</a>
         <a href="payment.html">Payment</a>
       </div>
-      <p class="footer-note">Demo site — no real transactions processed</p>
+      <p class="footer__note">Demo site — no real transactions</p>
     </div>
   </footer>
 

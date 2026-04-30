@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Oravixa — Premium digital gift cards. Pay with USDT and receive instantly.">
+  <meta name="description" content="Oravixa — Premium digital gift cards paid with USDT. Instant delivery.">
   <title>Oravixa — Premium Gift Cards</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ── Navbar ── -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <span class="logo-gem">◈</span>Oravixa
+  <!-- Navbar -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__gem">◈</span>Oravixa
       </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html"    class="nav-link active">Home</a></li>
-        <li><a href="checkout.html" class="nav-link">Checkout</a></li>
-        <li><a href="payment.html"  class="nav-link">Payment</a></li>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html"    class="nav__link active">Home</a></li>
+        <li><a href="checkout.html" class="nav__link">Checkout</a></li>
+        <li><a href="payment.html"  class="nav__link">Payment</a></li>
       </ul>
-      <button class="hamburger" id="ham" aria-label="Toggle menu">
+      <button class="nav__ham" id="ham" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -28,82 +28,66 @@
 
   <main>
 
-    <!-- ── Hero ── -->
+    <!-- Hero -->
     <section class="hero">
-      <div class="hero-orbs">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
+      <div class="hero__orbs">
+        <div class="orb orb--a"></div>
+        <div class="orb orb--b"></div>
       </div>
 
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
+      <div class="hero__body">
+        <div class="hero__pill">
+          <span class="hero__dot"></span>
           Instant Digital Delivery
         </div>
 
-        <h1 class="hero-title">
+        <h1 class="hero__h1">
           Premium Gift Cards<br>
-          <span class="grad-text">Pay with Crypto</span>
+          <span class="g">Pay with Crypto</span>
         </h1>
 
-        <p class="hero-sub">
-          Shop top gift cards for gaming, streaming &amp; shopping.<br>
-          Pay securely with USDT and receive your code instantly.
+        <p class="hero__sub">
+          Top gift cards for gaming, streaming &amp; shopping.<br>
+          Pay with USDT — receive your code in seconds.
         </p>
 
-        <div class="hero-actions">
-          <a href="#products" class="btn btn-primary">Browse Cards <span class="btn-arrow">↓</span></a>
-          <a href="checkout.html" class="btn btn-ghost">Go to Checkout</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-val">12+</span>
-            <span class="stat-lbl">Gift Cards</span>
-          </div>
-          <div class="stat-sep"></div>
-          <div class="stat">
-            <span class="stat-val">USDT</span>
-            <span class="stat-lbl">TRC20 Payment</span>
-          </div>
-          <div class="stat-sep"></div>
-          <div class="stat">
-            <span class="stat-val">Instant</span>
-            <span class="stat-lbl">Delivery</span>
-          </div>
+        <div class="hero__cta">
+          <a href="#products" class="btn btn--primary">
+            Browse Cards <span class="arr">↓</span>
+          </a>
+          <a href="checkout.html" class="btn btn--ghost">Go to Checkout</a>
         </div>
       </div>
     </section>
 
-    <!-- ── Products ── -->
-    <section class="products-section" id="products">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">Featured Gift Cards</h2>
-          <p class="section-sub">Click any card to purchase — no account needed</p>
+    <!-- Products -->
+    <section class="products" id="products">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title">Featured Gift Cards</h2>
+          <p class="section__sub">Click any card to buy — no account required</p>
         </div>
-        <div class="products-grid" id="productsGrid"></div>
+        <div class="grid" id="grid"></div>
       </div>
     </section>
 
   </main>
 
-  <!-- ── Footer ── -->
+  <!-- Footer -->
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo">
-          <span class="logo-gem">◈</span>Oravixa
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo">
+          <span class="nav__gem">◈</span>Oravixa
         </a>
-        <p>Premium gift cards with instant crypto payments.</p>
+        <p>Premium gift cards · Instant crypto payments</p>
       </div>
-      <div class="footer-links">
+      <div class="footer__links">
         <a href="index.html">Home</a>
         <a href="checkout.html">Checkout</a>
         <a href="payment.html">Payment</a>
       </div>
-      <p class="footer-note">Demo site — no real transactions processed</p>
+      <p class="footer__note">Demo site — no real transactions</p>
     </div>
   </footer>
 
